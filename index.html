@@ -10,6 +10,9 @@
   <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
   <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"></script>
   <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+  <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+  <script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>
+
 
   <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <style amp-custom>
@@ -85,18 +88,27 @@
 
     /* sidebar */ 
     .close-sidebar {
-      float:right;
-      margin:10px;
+      position: absolute;
+      right:15px;
+      top:20px;
     }
+
     #sidebar1 {
       background: #f2f2f2;
       width:100%;
       text-align:left;
     }
 
+    #sidebar1 h4 {
+      padding-left:35px;
+      font-weight: 100;
+      text-transform: uppercase;
+    }
+
     .sidebar {
       list-style: none;
       padding-left:0px;
+      margin:0px;
     }
 
     .sidebar li{
@@ -109,11 +121,39 @@
       padding: 0 20px;
     }
 
+    .search-bar-nav {
+      background-color: #fff;
+      border-bottom: 1px solid #e0e0e0;
+      padding:15px;
+    }
+
+    #search {
+      fill:#2198dc;
+      width:13px;
+      height:13px;
+    }
+
+    #search-bar-form input {
+      font-size:16px;
+      width:160px;
+    }
+
+
     /* main content */
     #info-modals {
       height:20px;
       width:20px;
       fill: #2198dc;
+    }
+
+    button {
+      border: 2px solid #2198dc;
+      color: #2198dc;
+      text-transform: uppercase;
+      background:transparent;
+      border-radius: 25px;
+      font-weight: bold;
+      padding:8px 15px;
     }
 
     /* tabs */
@@ -150,7 +190,16 @@
     </header>
     <amp-sidebar id="sidebar1" layout="nodisplay" side="right">
       <div role="button" aria-label="close sidebar" on="tap:sidebar1.toggle" tabindex="0" class="close-sidebar">✕</div>
-      <div class="search"></div>
+      <h4>Menu</h4>
+      <div class="search-bar-nav">
+        <form id="search-bar-form" target="_top" action="/search" data-placeholder-mobile="Type Here" data-placeholder-desktop="Search for anything Honda">
+        <div class="input-wrapper clearfix">
+            <svg id="search" viewBox="0 0 80 80" width="100%" height="100%"><path d="M78.4 70.6L58.1 50.3c3.7-5.2 5.8-11.5 5.8-18.4 0-17.6-14.3-32-32-32C14.3 0 0 14.3 0 32s14.3 32 32 32c6.8 0 13.2-2.2 18.4-5.8l20.3 20.3c2.1 2.1 5.6 2.1 7.8 0 2-2.3 2-5.8-.1-7.9zM32 53.3c-11.8 0-21.3-9.5-21.3-21.3S20.2 10.7 32 10.7 53.3 20.2 53.3 32 43.7 53.3 32 53.3z"></path></svg>
+            <input type="text" name="s" class="search-bar-input" value="" placeholder="Type Here">
+            <button type="submit" class="cta-btn tertiary btn-search" data-new-search="New Search" data-track="cta-click" data-search="Search">Search</button>
+        </div>
+    </form>
+      </div>
       <ul class="sidebar">
           <li><a href="#">Vehicles</a></li>
           <li><a href="#">Shopping Tools</a></li>
@@ -160,7 +209,11 @@
     </amp-sidebar>
 
     <h2>Current Offers</h2>
-    <p><a href="#"><svg id="info-modals" viewBox="0 0 14 14" width="100%" height="100%"><path d="M12 2C10.6.7 8.8 0 7 0S3.4.7 2 2C-.7 4.7-.7 9.2 2 11.9 3.4 13.3 5.2 14 7 14s3.6-.7 5-2c2.7-2.8 2.7-7.2 0-10zM7 3c.6 0 1.1.5 1.1 1.1S7.6 5.2 7 5.2s-1.1-.4-1.1-1.1C5.9 3.5 6.4 3 7 3zm1.8 8.4H5.2v-.9h.9V7h-.6v-.9h2.4v4.4h.9v.9z"></path></svg> Why lease with Honda?</a></p>
+    <p><a on="tap:whyLeaseWithHonda"><svg id="info-modals" viewBox="0 0 14 14" width="100%" height="100%"><path d="M12 2C10.6.7 8.8 0 7 0S3.4.7 2 2C-.7 4.7-.7 9.2 2 11.9 3.4 13.3 5.2 14 7 14s3.6-.7 5-2c2.7-2.8 2.7-7.2 0-10zM7 3c.6 0 1.1.5 1.1 1.1S7.6 5.2 7 5.2s-1.1-.4-1.1-1.1C5.9 3.5 6.4 3 7 3zm1.8 8.4H5.2v-.9h.9V7h-.6v-.9h2.4v4.4h.9v.9z"></path></svg> Why lease with Honda?</a></p>
+    <amp-lightbox id="whyLeaseWithHonda" layout="nodisplay">
+    
+    <button on="tap:quote-lb.close">Nice!</button>
+    </amp-lightbox>
     <div class="tabs">Tabs go here</div>
     <div class="tab-content">
        Tab content goes here
