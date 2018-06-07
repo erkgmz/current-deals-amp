@@ -34,6 +34,22 @@
       font-weight: 100;
     }
 
+    button {
+      border: 2px solid #2198dc;
+      color: #2198dc;
+      text-transform: uppercase;
+      background:transparent;
+      border-radius: 25px;
+      font-weight: bold;
+      padding:8px 22px;
+      font-size:14px;
+    }
+
+    button.blue {
+      background:#2198dc;
+      color:#fff;
+    }
+
     /* header */
     .headerbar {
       background: #007cc3;
@@ -143,22 +159,18 @@
       width:160px;
     }
 
+    #search-bar-form button {
+      font-size:11px;
+      padding:8px 15px;
+    }
+
 
     /* main content */
     #info-modals {
       height:20px;
       width:20px;
       fill: #2198dc;
-    }
-
-    button {
-      border: 2px solid #2198dc;
-      color: #2198dc;
-      text-transform: uppercase;
-      background:transparent;
-      border-radius: 25px;
-      font-weight: bold;
-      padding:8px 15px;
+      margin-bottom:-3px;
     }
 
     /* BRADLEY */
@@ -221,6 +233,7 @@
     amp-lightbox {
       width:88%;
       margin:15px auto;
+      box-shadow: 0 3px 9px rgba(0,0,0,.5);
     }
     .i-amphtml-fill-content {
       overflow: auto;
@@ -228,12 +241,16 @@
     .lightbox-content {
       padding: 20px;
       background: #fff;
+      text-align: left;
     }
 
     .lightbox-header {
       position:fixed;
-      border-bottom:1px solid #000;
-      width:calc(100% - 40px);
+      border-bottom:1px solid #ccc;
+      width:calc(100% - 86px);
+      background:#fff;
+      margin-top:-20px;
+      padding:10px 0px;
     }
 
     .lightbox-copy {
@@ -245,8 +262,85 @@
       width: 30px;
       height: 30px;
       padding: 0px;
-      right: 15px;
-      top: 15px;
+      right: -5px;
+      top: 25px;
+    }
+
+    footer {
+      padding:30px;
+      background: #007cc3;
+      color:#a3c5e2;
+      font-size: 12px;
+      line-height: 2em;
+    }
+
+    footer .copyright {
+      margin-bottom:20px;
+    }
+
+    footer a {
+      color: #a3c5e2;
+      text-decoration: underline;
+    }
+
+    /* cards */
+    .card {
+      margin:10px auto;
+      padding:30px;
+      background:#fff;
+      color:#00446b;
+    }
+    .card h3 {
+      margin-top:0px;
+    }
+    .offers-group-model-name {
+      font-size:22px;
+      font-weight: bold;
+    }
+    .offer-card-type {
+      color:#49c595;
+      font-weight: bold;
+      font-size:16px;
+      margin:15px 0;
+    }
+
+    .offer-card-type span {
+      background:#49c595;
+      padding:5px;
+      border-radius: 100%;
+      color:#fff;
+          width: 17px;
+    height: 17px;
+    display: inline-block;
+    margin-right: 5px;
+
+    }
+
+    .offer-card-title {
+      font-size:14px;
+      font-weight: bold;
+    }
+
+    .offer-card-payment {
+      font-size: 40px;
+      font-weight: bold;
+      margin-bottom:15px;
+    }
+
+    .card .disclaimer {
+      font-size: 10px;
+    text-align: left;
+    padding-bottom: 25px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eaeaea;
+    }
+
+    .card .link {
+      font-size:14px;
+      text-transform: uppercase;
+      margin-top: 20px;
+      font-weight: bold;
+      display: block;
     }
   </style>
 </head>
@@ -281,7 +375,7 @@
         <div class="input-wrapper clearfix">
             <svg id="search" viewBox="0 0 80 80" width="100%" height="100%"><path d="M78.4 70.6L58.1 50.3c3.7-5.2 5.8-11.5 5.8-18.4 0-17.6-14.3-32-32-32C14.3 0 0 14.3 0 32s14.3 32 32 32c6.8 0 13.2-2.2 18.4-5.8l20.3 20.3c2.1 2.1 5.6 2.1 7.8 0 2-2.3 2-5.8-.1-7.9zM32 53.3c-11.8 0-21.3-9.5-21.3-21.3S20.2 10.7 32 10.7 53.3 20.2 53.3 32 43.7 53.3 32 53.3z"></path></svg>
             <input type="text" name="s" class="search-bar-input" value="" placeholder="Type Here">
-            <button type="submit" class="cta-btn tertiary btn-search" data-new-search="New Search" data-track="cta-click" data-search="Search">Search</button>
+            <button type="submit">Search</button>
         </div>
     </form>
       </div>
@@ -309,25 +403,18 @@
         <div class="lightbox-copy">
             <h3>Turn-in Fee Waived for Loyal Customers </h3>
             <p>A loyal customer is one who purchases or leases another new Honda automobile within 30 days prior to or after the turn-in date.</p>
-            <br>
             <h3>$500 Excessive Wear and Use or Damage Waiver</h3>
             <p>Honda Leadership Leasing includes a $500 Excessive Wear and Use or Damage Waiver. Loyal customers who purchase or lease their next Honda vehicle may qualify for an additional waiver and may be eligible to get their turn-in fee waived. Total amount waived not to exceed $1,000.</p>
-            <br>
             <h3>Flexible Terms</h3>
             <p>Contracts can range from 24-60 months. You can even eliminate monthly lease payments with our One-Payment Leasing program.</p>
-            <br>
             <h3>Multiple Mileage Options</h3>
             <p>Choose from 12,000 or 15,000 miles per year. Additional miles can be purchased at signing.</p>
-            <br>
             <h3>Automatic GAP Coverage</h3>
             <p>Guaranteed Asset Protection (GAP) generally covers the difference between insurance payments and the outstanding lease if your vehicle is stolen or deemed a total loss. GAP coverage is standard on all Honda Leadership Leases.</p>
-            <br>
             <h3>Guaranteed Purchase Price</h3>
             <p>Honda Leadership Leases lock in the end-of-lease purchase price at signing, which can protect you against market fluctuations.</p>
-            <br>
             <h3>End-of-Term Flexibility</h3>
             <p>Even after your lease is over, a Honda Leadership Lease can still give you options. You can purchase the vehicle for the guaranteed price, lease or purchase a new Honda, or simply return the vehicle.</p>
-            <br>
             <p>No purchase-option fee.</p>
         </div>
     </div>
@@ -404,9 +491,31 @@
 
       <div class="dropdown">Dropdown goes here</div>
       <div class="zip-code">Zip code changer goes here</div>
-      <div class="cards">Vehicles cards go here</div>     
+      <div class="cards">
+        <div class="card">
+          <h3 class="offers-group-model-name">CR-V</h3>
+          <img src="" alt="Image goes here">
+          <div class="offer-card-type"><span>$</span> Featured Special Lease </div>
+          <h3 class="offer-card-title">2018 CR-V Continuously Variable Transmission 2WD LX Featured Special Lease</h3>
+          <div class="offer-card-payment">$259</div>
+          <small>Per month for 36 months.</small><br>
+          <small>$1,999 total due at signing.</small>
+          <p> Expires 07/05/18 </p>
+          <div class="disclaimer">Includes down payment with no security deposit. Excludes taxes, title and either dealer fees or documentary service fee. For well-qualified lessees.</div>
+          <button class="blue">Get this offer</button>
+          <a href="#" class="link">Offer Details</a>
+        </div>
+      </div>     
     </div>
-
+<footer>
+    <div class="copyright">©2018 <a href="http://www.honda.com" target="_blank">American Honda Motor Co., Inc.</a> All information contained herein applies to U.S. vehicles only. Please see our <a href="/information/consumer-privacy-policy">Privacy Policy</a> and <a href="/information/legal-terms">Legal Terms and Conditions</a>. For non-U.S.-distributor information go to <a href="http://world.honda.com/link/" target="_blank">world.honda.com</a>.</div>
+    <div class="text-links">
+        <a href="">Vehicle Data Privacy</a>
+        <a href="">Privacy Policy</a>
+        <a href="/information/legal-terms">Terms &amp; Conditions</a>
+        <a href="/sitemap">Site Map</a>
+    </div>
+</footer>
 
 </body>
 </html>
