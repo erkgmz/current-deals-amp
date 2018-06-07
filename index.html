@@ -19,6 +19,11 @@
     }
     a {
       text-decoration: none;
+      color:#2198dc;
+    }
+
+    h2 {
+      font-weight: 100;
     }
 
     /* header */
@@ -79,11 +84,36 @@
     }
 
     /* sidebar */ 
+    .close-sidebar {
+      float:right;
+      margin:10px;
+    }
     #sidebar1 {
-      background: #fff;
-      width:88%;
+      background: #f2f2f2;
+      width:100%;
       text-align:left;
-      padding:20px;
+    }
+
+    .sidebar {
+      list-style: none;
+      padding-left:0px;
+    }
+
+    .sidebar li{
+      padding:10px 20px;
+      background:#ececec;
+    }
+
+    .sidebar li a {
+      color: #00446b;
+      padding: 0 20px;
+    }
+
+    /* main content */
+    #info-modals {
+      height:20px;
+      width:20px;
+      fill: #2198dc;
     }
 
     /* tabs */
@@ -92,6 +122,7 @@
       background:#f2f2f2;
       margin:20px 0;
     }
+
   </style>
 </head>
 <body>
@@ -119,15 +150,17 @@
     </header>
     <amp-sidebar id="sidebar1" layout="nodisplay" side="right">
       <div role="button" aria-label="close sidebar" on="tap:sidebar1.toggle" tabindex="0" class="close-sidebar">✕</div>
+      <div class="search"></div>
       <ul class="sidebar">
-          <li><a href="#">Example 1</a></li>
-          <li><a href="#">Example 2</a></li>
-          <li><a href="#">Example 3</a></li>
+          <li><a href="#">Vehicles</a></li>
+          <li><a href="#">Shopping Tools</a></li>
+          <li><a href="#">Owners</a></li>
+          <li><a href="#">Discover</a></li>
       </ul>
     </amp-sidebar>
 
     <h2>Current Offers</h2>
-    <p>Why lease with Honda?</p>
+    <p><a href="#"><svg id="info-modals" viewBox="0 0 14 14" width="100%" height="100%"><path d="M12 2C10.6.7 8.8 0 7 0S3.4.7 2 2C-.7 4.7-.7 9.2 2 11.9 3.4 13.3 5.2 14 7 14s3.6-.7 5-2c2.7-2.8 2.7-7.2 0-10zM7 3c.6 0 1.1.5 1.1 1.1S7.6 5.2 7 5.2s-1.1-.4-1.1-1.1C5.9 3.5 6.4 3 7 3zm1.8 8.4H5.2v-.9h.9V7h-.6v-.9h2.4v4.4h.9v.9z"></path></svg> Why lease with Honda?</a></p>
     <div class="tabs">Tabs go here</div>
     <div class="tab-content">
        Tab content goes here
