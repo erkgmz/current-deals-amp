@@ -16,6 +16,8 @@
 
   <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
   <script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>
+  <script async custom-element="amp-fx-flying-carpet" src="https://cdn.ampproject.org/v0/amp-fx-flying-carpet-0.1.js"></script>
+  <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
 
 
 
@@ -25,6 +27,7 @@
       font-family: 'AvenirNext', sans-serif;
       text-align:center;
     }
+
     a {
       text-decoration: none;
       color:#2198dc;
@@ -215,13 +218,13 @@
       margin:15px auto;
       box-shadow: 0 3px 9px rgba(0,0,0,.5);
     }
-    .i-amphtml-fill-content {
-      overflow: auto;
-    }
+   
     .lightbox-content {
       padding: 20px;
       background: #fff;
       text-align: left;
+      overflow: auto;
+      height: 100%;
     }
 
     .lightbox-header {
@@ -321,6 +324,48 @@
       margin-top: 20px;
       font-weight: bold;
       display: block;
+    }
+
+    /* accordions */
+    amp-accordion section h4 {
+      padding:20px;
+      text-align: left;
+      color: #00446b;
+    }
+
+    amp-accordion ul {
+      list-style: none;
+      text-align: left;
+      padding-left:20px;
+    }
+
+    amp-accordion ul li {
+      margin:15px 0;
+      font-size:13px;
+    }
+
+    .fc-content {
+      position: absolute;
+      color: #fff;
+      width:100%;
+      padding:20px;
+
+    }
+
+    .fc-content h4, .fc-content p {
+      padding-left:20px;
+      padding-right:20px;
+    }
+
+    .footer-search #search-bar-form input {
+      float: left;
+      width:275px;
+      margin-top: 4px;
+    }
+    .footer-search #search {
+      float:left;
+      margin-top:10px;
+      margin-right:5px;
     }
   </style>
 </head>
@@ -437,7 +482,7 @@
 
       <!-- ERIK WORK HERE -->
 
-      <amp-list src="./offers.json"
+      <amp-list src="/offers.json"
         layout="fixed-height"
         height="300" id="one"
         single-item>
@@ -468,13 +513,9 @@
           </div>
         </template>
       </amp-list>
-
-      <div class="dropdown">Dropdown goes here</div>
-      <div class="zip-code">Zip code changer goes here</div>
       <div class="cards">
         <div class="card">
           <h3 class="offers-group-model-name">CR-V</h3>
-          <img src="" alt="Image goes here">
           <div class="offer-card-type"><span>$</span> Featured Special Lease </div>
           <h3 class="offer-card-title">2018 CR-V Continuously Variable Transmission 2WD LX Featured Special Lease</h3>
           <div class="offer-card-payment">$259</div>
@@ -485,8 +526,69 @@
           <button class="blue">Get this offer</button>
           <a href="#" class="link">Offer Details</a>
         </div>
-      </div>     
+      </div> 
+      
     </div>
+      <amp-fx-flying-carpet height="280px">
+        <amp-img src="/images/whylease.jpg"
+          width="411"
+          height="731"
+          alt="Why Lease with Honda"
+          layout="responsive"></amp-img>
+        <div class="fc-content">
+          <h4>Why lease with Honda?</h4>
+          <p>Keep your options open with lower up-front costs and flexible contract terms.</p><br>
+          <button class="blue">Learn More</button>
+        </div>
+    </amp-fx-flying-carpet>    
+    <div class="search-bar-nav footer-search">
+      <form id="search-bar-form" target="_top" action="/search" data-placeholder-mobile="Type Here" data-placeholder-desktop="Search for anything Honda">
+        <div class="input-wrapper clearfix">
+          <div class="input">
+            <svg id="search" viewBox="0 0 80 80" width="100%" height="100%">
+                <path d="M78.4 70.6L58.1 50.3c3.7-5.2 5.8-11.5 5.8-18.4 0-17.6-14.3-32-32-32C14.3 0 0 14.3 0 32s14.3 32 32 32c6.8 0 13.2-2.2 18.4-5.8l20.3 20.3c2.1 2.1 5.6 2.1 7.8 0 2-2.3 2-5.8-.1-7.9zM32 53.3c-11.8 0-21.3-9.5-21.3-21.3S20.2 10.7 32 10.7 53.3 20.2 53.3 32 43.7 53.3 32 53.3z"></path>
+            </svg>
+            <input type="text" name="s" class="search-bar-input" value="" placeholder="Type Here"></div>
+            <button type="submit">Search</button>
+        </div>
+    </form>
+  </div>
+<amp-accordion>
+  <section>
+    <h4>Vehicles</h4>
+    <ul>
+      <li><a href="#">Accord Models</a></li>
+      <li><a href="#">Civic Models</a></li>
+    </ul>
+  </section>
+  <section>
+    <h4>Shopping Tools</h4>
+    <ul>
+      <li><a href="#">Build & Price</a></li>
+      <li><a href="#">Search Inventory</a></li>
+    </ul>
+  </section>
+  <section>
+    <h4>Discover Honda</h4>
+       <ul>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">FAQ</a></li>
+    </ul>
+
+  </section>
+   <section>
+    <h4>Help & Support</h4>
+       <ul>
+      <li><a href="#">Accord Models</a></li>
+      <li><a href="#">Civic Models</a></li>
+    </ul>
+
+  </section>
+   <section>
+    <h4>Owners</h4>
+        <p>Bunch of awesome content.</p>
+  </section>
+</amp-accordion>
 <footer>
     <div class="copyright">©2018 <a href="http://www.honda.com" target="_blank">American Honda Motor Co., Inc.</a> All information contained herein applies to U.S. vehicles only. Please see our <a href="/information/consumer-privacy-policy">Privacy Policy</a> and <a href="/information/legal-terms">Legal Terms and Conditions</a>. For non-U.S.-distributor information go to <a href="http://world.honda.com/link/" target="_blank">world.honda.com</a>.</div>
     <div class="text-links">
