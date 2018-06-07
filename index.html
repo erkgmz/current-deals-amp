@@ -4,18 +4,74 @@
   <meta charset="utf-8">
   <title>Honda Lease Deals and Current Finance Offers | Honda</title>
   <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+  <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"></script>
   <link rel="canonical" href="https://ampbyexample.com/introduction/hello_world/">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
   <style amp-custom>
     /* Put custom styles here*/
   </style>
   <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-
 </head>
 <body>
-  <!-- Most HTML tags can be used directly in AMP HTML. -->
-  <h1>Hello World!</h1>
-  <amp-img src="/img/amp.jpg" width="1080" height="610" layout="responsive"></amp-img>
-  <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+  <h1>Hello World</h1>
+  <amp-state id="offers">
+    <script type="application/json">
+      {
+        "Id": "090111c081bd1ea8-CV2F9JKNW",
+        "eShoppingId": "090111c081bd1ea8",
+        "ahmSalesProgramId": "HP-P95",
+        "SalesProgramName": "2018 Accord Sedan Special APR",
+        "SalesProgramType": "Finance",
+        "SalesProgramTypeDescription": "Special APR",
+        "StartDate": "2018-05-01",
+        "EndDate": "2018-07-05",
+        "IsFeatured": true,
+        "BusinessPriority": 10,
+        "ModelId": "CV2F9JKNW",
+        "ModelGroupName": "Accord Sedan",
+        "ModelYear": 2018,
+        "ModelStockPhoto": "/-/media/Honda-Automobiles/Vehicles/2018/Accord Sedan/AW/Thumb/thumb_Accord_front_20TTRG_2018_RadiantRedMetallic_CV2F9JKNW_R-569M.png",
+        "ModelStockPhotoLarge": "/-/media/Honda-Automobiles/Vehicles/2018/Accord Sedan/AW/carshot/carshot_Accord_front_20TTRG_2018_RadiantRedMetallic_CV2F9JKNW_R-569M.png",
+        "ApplicableModelIds": [
+          "CV1E3JEW",
+          "CV1F1JEW",
+          "CV1F3JEW",
+          "CV1F4JJW",
+          "CV1F5JJNW",
+          "CV1F6JKNW",
+          "CV1F9JKNW",
+          "CV2E3JJW",
+          "CV2F3JJW",
+          "CV2F5JJNW",
+          "CV2F6JKNW",
+          "CV2F9JKNW"
+        ],
+        "SpecialShortDescription": "1.9% APR for 24-36 months or 2.9% APR for 37-60 months.",
+        "SpecialDescription": "Special APR offer valid on new and unregistered 2018 Accord Sedan Models from May 1, 2018 through July 5, 2018, to well qualified buyers on approved credit by Honda Financial Services through participating dealers. Must take new retail delivery on vehicle from dealer stock by July 5, 2018. Not all buyers may qualify. Higher rates apply for buyers with lower credit ratings. Example for 2018 Accord: 1.9% for 36 months financing at $28.60 a month for every $1,000.00 financed. Dealers set actual prices. See your Honda dealer for details.",
+        "ShortDisclaimer": "For well qualified buyers and buyers that qualify for the Honda Graduate Program criteria.",
+        "TermsAndConditions": "<br><br>",
+        "PaymentTerms": {
+          "FinanceTerms": [
+            {
+              "APR": 1.9,
+              "TermMin": 24,
+              "TermMax": 36
+            },
+            {
+              "APR": 2.9,
+              "TermMin": 37,
+              "TermMax": 60
+            }
+          ]
+        },
+        "AdditionalInfoUrl": "",
+        "BannerImageUrl": "",
+        "CutlineText": ""
+      }
+    </script>
+  </amp-state>
+  <p [text]="'This is a ' + offers.SalesProgramName + '.'">XXXXX 2018 Accord Sedan Special APR.</p>
+
 </body>
 </html>
