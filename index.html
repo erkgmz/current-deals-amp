@@ -167,6 +167,12 @@
       background:#f2f2f2;
       margin:20px 0;
     }     
+    
+    
+    
+  </style>
+
+    <style amp-custom>       
     .ampTabContainer {
         display: flex;
         flex-wrap: wrap;
@@ -194,6 +200,22 @@
     .tabButton[selected]+.tabContent {
         display: block;
     }
+
+    /* For example below (not required) */
+    .itemCustom {
+        border: 1px solid #000;
+        height: 280px;
+        width: 380px;
+        margin: 10px;
+        text-align: center;
+        padding-top: 140px;
+    }
+    amp-selector {
+      padding: 1rem;
+      margin: 1rem;
+    }
+</style>
+<style amp-custom>       
 
     /* lightbox */ 
     amp-lightbox {
@@ -310,7 +332,37 @@
         </div>
     </div>
 </amp-lightbox>
-    <div class="tabs">Tabs go here</div>
+    <div class="tabs">
+      
+      <amp-selector  on="select:AMP.setState({selectedTab: event.targetOption})"
+                      [selected]="selectedTab"
+                      role="tablist"
+                      layout="container"
+                  class="ampTabContainer">
+        <div role="tab"
+          class="tabButton"
+          selected
+          option="a" selected>Tab one</div>
+            <div role="tabpanel"
+              class="tabContent">Tab one content... </div>
+        <div role="tab"
+          class="tabButton"
+          option="b">Tab two</div>
+            <div role="tabpanel"
+              class="tabContent">Tab two content... </div>
+        <div role="tab"
+          class="tabButton"
+          option="c">Tab three</div>
+            <div role="tabpanel"
+              class="tabContent">Tab three content... </div>
+        <div role="tab"
+          class="tabButton"
+          option="d">Tab four</div>
+            <div role="tabpanel"
+              class="tabContent">Tab FOUR content... </div>
+      </amp-selector>
+
+    </div>
     <div class="tab-content">
 
 
@@ -320,7 +372,7 @@
 
       <amp-list src="./offers.json"
         layout="fixed-height"
-        height="300"
+        height="300" id="one"
         single-item>
         <template type="amp-mustache">
           <p>{{Id}}</p>
