@@ -1,0 +1,37 @@
+
+{  
+   "Offers":[  
+
+      {  
+         "Id":"090111c081bd1eb3-CV1F1JEW",
+         "SalesProgramName":"2018 Accord Sedan Continuously Variable Transmission LX Featured Special Lease",
+         "SalesProgramType":"Lease",
+         "SalesProgramTypeDescription":"Featured Special Lease",
+         "StartDate":"2018-05-01",
+         "EndDate":"2018-07-05",
+         "IsFeatured":true,
+         "BusinessPriority":9,
+         "ModelId":"CV1F1JEW",
+         "ModelGroupName":"Accord Sedan",
+         "ModelYear":2018,
+         "ModelStockPhoto":"images/thumb_Accord_front_15TLX_2018_LunarSilverMetallic_CV1F1JEW_NH-830M.png",
+         "ModelStockPhotoLarge":"images/thumb_Accord_front_15TLX_2018_LunarSilverMetallic_CV1F1JEW_NH-830M.png",
+         "SpecialShortDescription":"$249.00 per month for 36 months.  $2,399.00 total due at signing.",
+         "SpecialDescription":"Closed end lease for 2018 Accord Sedan Continuously Variable Transmission LX (CV1F1JEW) available from May 1, 2018 through July 5, 2018, to well-qualified lessees approved by Honda Financial Services. Not all lessees will qualify. Higher lease rates apply for lessees with lower credit ratings. MSRP $24,465.00 (includes destination, excludes tax, license, title, registration, documentation fees, options, insurance and the like). Actual net capitalized cost $21,957.45. Net capitalized cost includes $595 acquisition fee. Dealer contribution may vary and could affect actual lease payment. Total monthly payments $8,964.00. Option to purchase at lease end $14,434.35. Must take new retail delivery on vehicle from dealer stock by July 5, 2018. Lessee responsible for maintenance, excessive wear/tear and 15¢/mile over 12,000 miles/year for vehicles with MSRP less than $30,000, and 20¢/mile over 12,000 miles/year for vehicles with MSRP of $30,000 or more. See your Honda dealer for complete details.",
+         "ShortDisclaimer":"Includes down payment with no security deposit. Excludes taxes, title and either dealer fees or documentary service fee. For well-qualified lessees.",
+         "TermsAndConditions":"<br><br>",
+         "LeasePaymentInfo":{  
+            "TermMonths":36,
+            "BaseMonthlyPayment":249,
+            "TotalDueAtSigning":2399,
+            "CapitalCostReduction":2150
+         },
+         "AdditionalInfoUrl":"",
+         "BannerImageUrl":"",
+         "CutlineText":""
+      }
+
+
+
+]
+}
