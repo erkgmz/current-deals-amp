@@ -1,0 +1,270 @@
+<!doctype html>
+<html amp>
+<head>
+  <meta charset="utf-8">
+  <title>Honda Lease Deals and Current Finance Offers | Honda</title>
+  <link rel="canonical" href="https://automobiles.honda.com/tools/current-offers">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
+  <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+  <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"></script>
+  <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+  <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+  <script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>
+
+
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom>
+    body {
+      font-family: 'AvenirNext', sans-serif;
+      text-align:center;
+    }
+    a {
+      text-decoration: none;
+      color:#2198dc;
+    }
+
+    h2 {
+      font-weight: 100;
+    }
+
+    /* header */
+    .headerbar {
+      background: #007cc3;
+      color: #ffffff;
+      height: 60px;
+      font-size: 13px;
+    }
+
+    .headerbar a {
+      color: #ffffff;
+      border-right: 1px solid #4f91ca;
+      height: 60px;
+      padding: 0 15px;
+      text-align: center;
+      float:left;
+    }
+
+    .headerbar a span {
+      margin-top: 35px;
+      display: block
+    }
+
+    .headerbar svg {
+      fill: #fff;
+      position:relative;
+    }
+    #Header_Honda_Logo {
+      height: 60px;
+      width: 50px;
+    }
+
+    /* header icons */
+    #Vehicles {
+      height: 45px;
+      width: 45px;
+      display:block;
+      position: absolute;
+    }
+    
+    #Dealers {
+      width: 10px;
+      height:15px;
+      display: block;
+      margin:auto;
+      top:15px;
+    }
+    #Dealers + span {
+      margin-top:20px;
+    }
+
+    .hamburger {
+      float:right;
+      padding-right: 15px;
+      margin: 12px 0;
+      font-size:24px;
+    }
+
+    /* sidebar */ 
+    .close-sidebar {
+      position: absolute;
+      right:15px;
+      top:20px;
+    }
+
+    #sidebar1 {
+      background: #f2f2f2;
+      width:100%;
+      text-align:left;
+    }
+
+    #sidebar1 h4 {
+      padding-left:35px;
+      font-weight: 100;
+      text-transform: uppercase;
+    }
+
+    .sidebar {
+      list-style: none;
+      padding-left:0px;
+      margin:0px;
+    }
+
+    .sidebar li{
+      padding:10px 20px;
+      background:#ececec;
+    }
+
+    .sidebar li a {
+      color: #00446b;
+      padding: 0 20px;
+    }
+
+    .search-bar-nav {
+      background-color: #fff;
+      border-bottom: 1px solid #e0e0e0;
+      padding:15px;
+    }
+
+    #search {
+      fill:#2198dc;
+      width:13px;
+      height:13px;
+    }
+
+    #search-bar-form input {
+      font-size:16px;
+      width:160px;
+    }
+
+
+    /* main content */
+    #info-modals {
+      height:20px;
+      width:20px;
+      fill: #2198dc;
+    }
+
+    button {
+      border: 2px solid #2198dc;
+      color: #2198dc;
+      text-transform: uppercase;
+      background:transparent;
+      border-radius: 25px;
+      font-weight: bold;
+      padding:8px 15px;
+    }
+
+    /* tabs */
+    .tab-content {
+      padding: 20px 10px;
+      background:#f2f2f2;
+      margin:20px 0;
+    }
+
+  </style>
+</head>
+<body>
+<<<<<<< HEAD
+  <h1>Hello World</h1>
+
+  <amp-list src="./offers.json"
+    layout="fixed-height"
+    height="300"
+    single-item>
+    <template type="amp-mustache">
+      <p>{{Id}}</p>
+    </template>
+  </amp-list>
+
+  <amp-list width="auto"
+    height="100"
+    layout="fixed-height"
+    src="//localhost:8000/offers.json">
+    <template type="amp-mustache">
+      <div class="url-entry">
+        <a href="{{items.url}}">{{items.title}}</a>
+      </div>
+    </template>
+  </amp-list>
+
+  <amp-list width="auto"
+    height="100"
+    layout="fixed-height"
+    src="./offers.json">
+    <template type="amp-mustache">
+      <div class="url-entry">
+        <a href="{{url}}">{{title}}</a>
+      </div>
+    </template>
+  </amp-list>
+
+
+=======
+    <header class="headerbar">
+      <a class="header-logo" href="https://automobiles.honda.com">
+        <svg id="Header_Honda_Logo" viewBox="0 0 313 206" width="100%" height="100%"><path d="M47.6 165.2l4.4.5c2 .2 2.2 1.9 2.2 2.9v5.2H33.9v-5.2c0-1.1.2-2.7 2.2-2.9l4.4-.5v-4.5H14.2v4.5l4.4.5c2 .2 2.2 1.9 2.2 2.9v17.1c0 1.1-.2 2.7-2.2 2.9l-4.4.5v4.4h26.3v-4.4l-4.4-.5c-2-.2-2.2-1.9-2.2-2.9v-5.2h20.3v5.2c0 1.1-.2 2.7-2.2 2.9l-4.4.5v4.4H74v-4.4l-4.4-.5c-2-.2-2.2-1.9-2.2-2.9v-17.1c0-1.1.2-2.7 2.2-2.9l4.4-.5v-4.5H47.7v4.5h-.1zM223.3 160.8h-32.5v4.5l3.9.4c1.4.2 2.3.8 2.3 2.7v17.4c0 1.1-.2 2.7-2.2 2.9l-4.4.5v4.4h32.9c11.8 0 21.5-4.7 21.5-16.4s-9.7-16.4-21.5-16.4zm-2.4 26.6h-11v-20.3h11c6.5 0 8.7 3.1 8.7 10.1 0 7.1-2.2 10.2-8.7 10.2z"></path><path d="M300.1 188.7c-2.1-.2-2.7-1.6-3.4-2.6L281.6 163c-1.1-1.7-1.9-2.2-3.5-2.2h-25v4.5l6 .7c.8.1 2 1.2 1 2.8L248.9 187c-.5.7-1 1.6-2.3 1.8l-4.5.5v4.4h21v-4.5l-3.6-.4c-1.5-.2-2.4-1.2-1.6-2.5l1.7-2.7h20.2l1.5 2.3c1.3 2-.3 2.8-1.8 3l-3.7.4v4.5h28.5v-4.4l-4.2-.7zm-36.9-10.9l6.2-10.1 6.6 10.1h-12.8zM167.2 165.2l4.4.5c2 .2 2.2 1.9 2.2 2.9V185l-17.4-22.9c-.8-1.1-1.5-1.4-3.3-1.4h-22.6v4.5l4.4.5c2 .2 2.2 1.9 2.2 2.9v17.1c0 1.1-.2 2.7-2.2 2.9l-4.4.5v4.4h21v-4.4l-4.4-.5c-2-.2-2.2-1.9-2.2-2.9v-16.4l17.4 22.9c.8 1.1 1.5 1.4 3.3 1.4h16v-25c0-1.1.2-2.7 2.2-2.9l4.4-.5v-4.5h-21v4.5zM102.2 159.7c-21.4 0-26.9 9.4-26.9 17.6s5.5 17.6 26.9 17.6 26.9-9.4 26.9-17.6c0-8.3-5.5-17.6-26.9-17.6zm0 28.8c-8.3 0-11.7-3.5-11.7-11.3s3.5-11.3 11.7-11.3c8.3 0 11.7 3.5 11.7 11.3 0 7.8-3.4 11.3-11.7 11.3z"></path><g><path d="M195.7 22.1c-3.6 16.2-5.1 23.6-8 35.3-2.8 11.2-5 21.7-8.8 26.7-3.8 5.1-9 6.2-12.5 6.6-1.8.2-3.1.3-7 .3s-5.2-.1-7-.3c-3.5-.4-8.6-1.5-12.5-6.6-3.8-5.1-6-15.5-8.8-26.7-2.9-11.7-4.4-19.1-8-35.3 0 0-3.6.1-5.2.3-2.2.2-3.9.3-5.7.6 0 0 2.1 33.2 3 47.3 1 14.8 2.7 39.8 4.4 58.6 0 0 3 .5 8.1.8 5.3.3 7.7.3 7.7.3 2.2-8.3 4.9-19.8 7.9-24.7 2.5-4 6.3-4.4 8.5-4.7 3.4-.5 6.3-.5 7.6-.5 1.3 0 4.2 0 7.6.5 2.2.3 6 .7 8.5 4.7 3.1 4.9 5.8 16.4 7.9 24.7 0 0 2.4 0 7.7-.3 5-.3 8.1-.8 8.1-.8 1.6-18.8 3.4-43.8 4.4-58.6.9-14.1 3-47.3 3-47.3-1.8-.2-3.5-.4-5.7-.6-1.6-.2-5.2-.3-5.2-.3z"></path><path d="M237.6 41.7c-2.1-21.1-16.2-25.6-28.6-27.6-6.2-1-17.3-1.9-24.4-2.2-6.2-.4-20.8-.6-25.2-.6-4.3 0-19 .2-25.2.6-7.1.3-18.2 1.2-24.4 2.2-12.4 2.1-26.4 6.5-28.6 27.6-.6 5.8-.8 13.3-.6 21.3.2 13.4 1.3 22.4 2 28.7.4 4.3 2.2 17.2 4.5 23.9 3.2 9.2 6 11.8 9.4 14.6 6.1 5 16.2 6.5 18.3 6.9 11.4 2 34.4 2.4 44.6 2.4s33.2-.4 44.6-2.4c2.1-.4 12.2-1.9 18.3-6.9 3.3-2.7 6.2-5.4 9.4-14.6 2.3-6.7 4.1-19.6 4.5-23.9.7-6.3 1.8-15.3 2-28.7.2-8.1 0-15.6-.6-21.3zm-7.7 35.4c-1.2 16.9-2.7 27-4.9 34.3-1.9 6.4-4.2 10.7-7.6 13.8-5.7 5.1-13.5 6.3-18.1 6.9-9.9 1.5-26.7 2-39.8 2s-29.9-.5-39.8-2c-4.6-.7-12.4-1.8-18.1-6.9-3.4-3.1-5.7-7.4-7.6-13.8-2.1-7.3-3.6-17.4-4.9-34.3-.8-10.2-.6-26.6.5-35.5 1.7-13.2 8.2-19.8 22.3-22.3 6.6-1.2 15.4-2 23.7-2.4 6.7-.5 17.7-.7 23.9-.6 6.2-.1 17.2.2 23.9.6 8.4.4 17.2 1.2 23.7 2.4 14 2.5 20.6 9.1 22.3 22.3 1.1 8.9 1.2 25.4.5 35.5z"></path></g></svg>
+      </a>
+      <a href="#">
+        <svg id="Vehicles" viewBox="0 0 80 80" width="100%" height="100%"><path d="M55.4 37c.5-.1 1-.6.9-1.2 0-.1 0-.2-.1-.3-.6-1-2.3-1.2-2.6-1.2s-.3.2-.3.2v1.9l-.7-.7S51 29.9 49 29.5c-3-.4-5.9-.6-8.9-.6-3 .1-5.9.3-8.9.6-2 .4-3.9 6.2-3.9 6.2l-.9.7v-1.9s.2-.4 0-.4c-1 .1-1.9.6-2.6 1.3-.6 1 .7 1.6 1 1.6H26l.1.7s-1.6 1-1.6 4.3c-.1 3.4.1 5.9.1 5.9l-.1 1.1s.2 4 .8 4.2c1 .1 2 .1 3 0 .3-.1.5-.4.6-.7 0-.4.1-1.9.1-1.9h2s0 .5.2.5h17.6c.3 0 .3-.5.3-.5h2s.1 1.5.1 1.9c0 .3.3.6.6.7 1 .1 2 .1 3 0 .6-.1.8-4.2.8-4.2l-.1-1.2s.2-2.6.1-5.9c-.1-3.3-1.6-4.2-1.6-4.2l.1-.7h1.3zm-24.3-6.6s-1.7 3.7-2.1 5.2c.4-1.5 2.1-5.2 2.1-5.2 3-.4 6-.5 9.1-.5 3 0 6 .2 9 .5 0 0 2.2 4.6 2.2 5.6H29c0-.1 0-.2.1-.4.4-1.5 2.1-5.2 2.1-5.2h.3-.4zm23.2 11v.7c.1.4-.2.8-.6.9-.2 0-2.8.8-4.7 1.3-.4.4-2.1 1.8-3.4 1.9-1.3.1-5.6.2-5.6.2s-4.2-.1-5.6-.1c-1.4 0-3-1.5-3.4-1.9-1.8-.5-4.6-1.3-4.8-1.3-.4-.1-.7-.5-.6-.9v-.5l.6.2c2 .5 5.4 1.5 5.4 1.5.8.2 1.4.6 1.9 1.2.2.4.6.6 1.1.6l5.5.1 5.4-.1c.5-.1.8-.3 1.1-.7.5-.7 1.2-1.2 2-1.4.1 0 3.1-.9 5.1-1.3l.6-.4z"></path></svg>
+         <span>
+            Vehicles
+           <!--  <svg class="nav-chevron-svg" version="1.1" viewBox="0 0 110 45" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
+                <g class="arrow-container">
+                    <line class="line left" x1="10" y1="50" x2="50" y2="50"></line>
+                    <line class="line right" x1="90" y1="50" x2="50" y2="50"></line>
+                </g>
+            </svg> -->
+        </span>
+      </a>
+      <a href="#">
+        <svg id="Dealers" viewBox="0 0 18 24" width="100%" height="100%"><path d="M18 8.6c0-5-4.1-9-9.1-8.9C4-.3 0 3.8 0 8.8.1 17.7 9.1 24 9.1 24s9-6.5 8.9-15.4zm-8.9 4.5c-2.4-.1-4.3-2-4.2-4.4.1-2.4 2-4.3 4.4-4.2 2.3.1 4.2 2 4.2 4.3 0 2.4-2 4.3-4.4 4.3z"></path></svg>
+        <span>Dealers</span>
+      </a>
+      <div role="button" on="tap:sidebar1.toggle" tabindex="0" class="hamburger">☰</div>
+    </header>
+    <amp-sidebar id="sidebar1" layout="nodisplay" side="right">
+      <div role="button" aria-label="close sidebar" on="tap:sidebar1.toggle" tabindex="0" class="close-sidebar">✕</div>
+      <h4>Menu</h4>
+      <div class="search-bar-nav">
+        <form id="search-bar-form" target="_top" action="/search" data-placeholder-mobile="Type Here" data-placeholder-desktop="Search for anything Honda">
+        <div class="input-wrapper clearfix">
+            <svg id="search" viewBox="0 0 80 80" width="100%" height="100%"><path d="M78.4 70.6L58.1 50.3c3.7-5.2 5.8-11.5 5.8-18.4 0-17.6-14.3-32-32-32C14.3 0 0 14.3 0 32s14.3 32 32 32c6.8 0 13.2-2.2 18.4-5.8l20.3 20.3c2.1 2.1 5.6 2.1 7.8 0 2-2.3 2-5.8-.1-7.9zM32 53.3c-11.8 0-21.3-9.5-21.3-21.3S20.2 10.7 32 10.7 53.3 20.2 53.3 32 43.7 53.3 32 53.3z"></path></svg>
+            <input type="text" name="s" class="search-bar-input" value="" placeholder="Type Here">
+            <button type="submit" class="cta-btn tertiary btn-search" data-new-search="New Search" data-track="cta-click" data-search="Search">Search</button>
+        </div>
+    </form>
+      </div>
+      <ul class="sidebar">
+          <li><a href="#">Vehicles</a></li>
+          <li><a href="#">Shopping Tools</a></li>
+          <li><a href="#">Owners</a></li>
+          <li><a href="#">Discover</a></li>
+      </ul>
+    </amp-sidebar>
+
+    <h2>Current Offers</h2>
+    <p><a on="tap:whyLeaseWithHonda"><svg id="info-modals" viewBox="0 0 14 14" width="100%" height="100%"><path d="M12 2C10.6.7 8.8 0 7 0S3.4.7 2 2C-.7 4.7-.7 9.2 2 11.9 3.4 13.3 5.2 14 7 14s3.6-.7 5-2c2.7-2.8 2.7-7.2 0-10zM7 3c.6 0 1.1.5 1.1 1.1S7.6 5.2 7 5.2s-1.1-.4-1.1-1.1C5.9 3.5 6.4 3 7 3zm1.8 8.4H5.2v-.9h.9V7h-.6v-.9h2.4v4.4h.9v.9z"></path></svg> Why lease with Honda?</a></p>
+    <amp-lightbox id="whyLeaseWithHonda" layout="nodisplay">
+    
+    <button on="tap:quote-lb.close">Nice!</button>
+    </amp-lightbox>
+    <div class="tabs">Tabs go here</div>
+    <div class="tab-content">
+       Tab content goes here
+      <div class="dropdown">Dropdown goes here</div>
+      <div class="zip-code">Zip code changer goes here</div>
+      <div class="cards">Vehicles cards go here</div>     
+    </div>
+
+  <amp-state id="offers">
+    <script type="application/json">
+      {"Offers":[{"Id":"090111c081bd1ea8-CV2F9JKNW","SalesProgramName":"2018 Accord Sedan Special APR","SalesProgramType":"Finance","SalesProgramTypeDescription":"Special APR","StartDate":"2018-05-01","EndDate":"2018-07-05","IsFeatured":true,"BusinessPriority":10,"ModelId":"CV2F9JKNW","ModelGroupName":"Accord Sedan","ModelYear":2018,"ModelStockPhoto":"/images/thumb_Accord_front_20TTRG_2018_RadiantRedMetallic_CV2F9JKNW_R-569M.png","ModelStockPhotoLarge":"/images/thumb_Accord_front_20TTRG_2018_RadiantRedMetallic_CV2F9JKNW_R-569M.png","SpecialShortDescription":"1.9% APR for 24-36 months or 2.9% APR for 37-60 months.","SpecialDescription":"Special APR offer valid on new and unregistered 2018 Accord Sedan Models from May 1, 2018 through July 5, 2018, to well qualified buyers on approved credit by Honda Financial Services through participating dealers. Must take new retail delivery on vehicle from dealer stock by July 5, 2018. Not all buyers may qualify. Higher rates apply for buyers with lower credit ratings. Example for 2018 Accord: 1.9% for 36 months financing at $28.60 a month for every $1,000.00 financed. Dealers set actual prices. See your Honda dealer for details.","ShortDisclaimer":"For well qualified buyers and buyers that qualify for the Honda Graduate Program criteria.","TermsAndConditions":"<br><br>","PaymentTerms":{"FinanceTerms":[{"APR":1.9,"TermMin":24,"TermMax":36},{"APR":2.9,"TermMin":37,"TermMax":60}]},"AdditionalInfoUrl":"","BannerImageUrl":"","CutlineText":""},{"Id":"090111c081bd1eb3-CV1F1JEW","SalesProgramName":"2018 Accord Sedan Continuously Variable Transmission LX Featured Special Lease","SalesProgramType":"Lease","SalesProgramTypeDescription":"Featured Special Lease","StartDate":"2018-05-01","EndDate":"2018-07-05","IsFeatured":true,"BusinessPriority":9,"ModelId":"CV1F1JEW","ModelGroupName":"Accord Sedan","ModelYear":2018,"ModelStockPhoto":"/images/thumb_Accord_front_15TLX_2018_LunarSilverMetallic_CV1F1JEW_NH-830M.png","ModelStockPhotoLarge":"/images/thumb_Accord_front_15TLX_2018_LunarSilverMetallic_CV1F1JEW_NH-830M.png","SpecialShortDescription":"$249.00 per month for 36 months.  $2,399.00 total due at signing.","SpecialDescription":"Closed end lease for 2018 Accord Sedan Continuously Variable Transmission LX (CV1F1JEW) available from May 1, 2018 through July 5, 2018, to well-qualified lessees approved by Honda Financial Services. Not all lessees will qualify. Higher lease rates apply for lessees with lower credit ratings. MSRP $24,465.00 (includes destination, excludes tax, license, title, registration, documentation fees, options, insurance and the like). Actual net capitalized cost $21,957.45. Net capitalized cost includes $595 acquisition fee. Dealer contribution may vary and could affect actual lease payment. Total monthly payments $8,964.00. Option to purchase at lease end $14,434.35. Must take new retail delivery on vehicle from dealer stock by July 5, 2018. Lessee responsible for maintenance, excessive wear/tear and 15¢/mile over 12,000 miles/year for vehicles with MSRP less than $30,000, and 20¢/mile over 12,000 miles/year for vehicles with MSRP of $30,000 or more. See your Honda dealer for complete details.","ShortDisclaimer":"Includes down payment with no security deposit. Excludes taxes, title and either dealer fees or documentary service fee. For well-qualified lessees.","TermsAndConditions":"<br><br>","LeasePaymentInfo":{"TermMonths":36,"BaseMonthlyPayment":249,"TotalDueAtSigning":2399,"CapitalCostReduction":2150},"AdditionalInfoUrl":"","BannerImageUrl":"","CutlineText":""},{"Id":"090111c081bd1ec3-FC3B9JKNW","SalesProgramName":"2018 Civic Coupe Special APR","SalesProgramType":"Finance","SalesProgramTypeDescription":"Special APR","StartDate":"2018-05-01","EndDate":"2018-07-05","IsFeatured":true,"BusinessPriority":10,"ModelId":"FC3B9JKNW","ModelGroupName":"Civic Coupe","ModelYear":2018,"ModelStockPhoto":"/images/thumb_CivicCoupe_front_15T2DTOURING_2018_energygreenpearl_FC3B9JKNW_GY-30P.png","ModelStockPhotoLarge":"/images/thumb_CivicCoupe_front_15T2DTOURING_2018_energygreenpearl_FC3B9JKNW_GY-30P.png","SpecialShortDescription":"0.9% APR for 24-36 months or 1.9% APR for 37-60 months.","SpecialDescription":"Excluding Civic Type R<br />\n<br />\nSpecial APR offer valid on new and unregistered 2018 Civic Coupe Models from May 1, 2018 through July 5, 2018, to well qualified buyers on approved credit by Honda Financial Services through participating dealers. Must take new retail delivery on vehicle from dealer stock by July 5, 2018. Not all buyers may qualify. Higher rates apply for buyers with lower credit ratings. Example for 2018 Civic: 0.9% for 36 months financing at $28.16 a month for every $1,000.00 financed. Dealers set actual prices. See your Honda dealer for details.","ShortDisclaimer":"For well qualified buyers and buyers that qualify for the Honda Graduate Program criteria.","TermsAndConditions":"<br><br>","PaymentTerms":{"FinanceTerms":[{"APR":0.9,"TermMin":24,"TermMax":36},{"APR":1.9,"TermMin":37,"TermMax":60}]},"AdditionalInfoUrl":"","BannerImageUrl":"","CutlineText":""},{"Id":"090111c081bd1ec3-FK7G2JEW","SalesProgramName":"2018 Civic Hatchback Special APR","SalesProgramType":"Finance","SalesProgramTypeDescription":"Special APR","StartDate":"2018-05-01","EndDate":"2018-07-05","IsFeatured":true,"BusinessPriority":10,"ModelId":"FK7G2JEW","ModelGroupName":"Civic Hatchback","ModelYear":2018,"ModelStockPhoto":"/images/FK7G2JEW_aegean_blue_metallic_thumb.png","ModelStockPhotoLarge":"/images/FK7G2JEW_aegean_blue_metallic_thumb.png","SpecialShortDescription":"0.9% APR for 24-36 months or 1.9% APR for 37-60 months.","SpecialDescription":"Excluding Civic Type R<br />\n<br />\nSpecial APR offer valid on new and unregistered 2018 Civic Hatchback Models from May 1, 2018 through July 5, 2018, to well qualified buyers on approved credit by Honda Financial Services through participating dealers. Must take new retail delivery on vehicle from dealer stock by July 5, 2018. Not all buyers may qualify. Higher rates apply for buyers with lower credit ratings. Example for 2018 Civic: 0.9% for 36 months financing at $28.16 a month for every $1,000.00 financed. Dealers set actual prices. See your Honda dealer for details.","ShortDisclaimer":"For well qualified buyers and buyers that qualify for the Honda Graduate Program criteria.","TermsAndConditions":"<br><br>","PaymentTerms":{"FinanceTerms":[{"APR":0.9,"TermMin":24,"TermMax":36},{"APR":1.9,"TermMin":37,"TermMax":60}]},"AdditionalInfoUrl":"","BannerImageUrl":"","CutlineText":""},{"Id":"090111c081bd1ec3-FC2F8JJW","SalesProgramName":"2018 Civic Sedan Special APR","SalesProgramType":"Finance","SalesProgramTypeDescription":"Special APR","StartDate":"2018-05-01","EndDate":"2018-07-05","IsFeatured":true,"BusinessPriority":10,"ModelId":"FC2F8JJW","ModelGroupName":"Civic Sedan","ModelYear":2018,"ModelStockPhoto":"/images/thumb_CivicSedan_front_2-0L4DEXSENS_2018_aegeanbluemetallic_FC2F8JJW_B-593M.png","ModelStockPhotoLarge":"/images/thumb_CivicSedan_front_2-0L4DEXSENS_2018_aegeanbluemetallic_FC2F8JJW_B-593M.png","SpecialShortDescription":"0.9% APR for 24-36 months or 1.9% APR for 37-60 months.","SpecialDescription":"Excluding Civic Type R<br />\n<br />\nSpecial APR offer valid on new and unregistered 2018 Civic Sedan Models from May 1, 2018 through July 5, 2018, to well qualified buyers on approved credit by Honda Financial Services through participating dealers. Must take new retail delivery on vehicle from dealer stock by July 5, 2018. Not all buyers may qualify. Higher rates apply for buyers with lower credit ratings. Example for 2018 Civic: 0.9% for 36 months financing at $28.16 a month for every $1,000.00 financed. Dealers set actual prices. See your Honda dealer for details.","ShortDisclaimer":"For well qualified buyers and buyers that qualify for the Honda Graduate Program criteria.","TermsAndConditions":"<br><br>","PaymentTerms":{"FinanceTerms":[{"APR":0.9,"TermMin":24,"TermMax":36},{"APR":1.9,"TermMin":37,"TermMax":60}]},"AdditionalInfoUrl":"","BannerImageUrl":"","CutlineText":""}]}
+    </script>
+  </amp-state>
+  <p [text]="'This is a ' + offers.Offers.SalesProgramName + '.'">XXXXX 2018 Accord Sedan Special APR.</p>
+>>>>>>> f67db786ba1e31485e7d24ce11c78cccbe5f1915
+</body>
+</html>
