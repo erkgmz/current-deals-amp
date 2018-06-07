@@ -11,17 +11,14 @@
   <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
   <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"></script>
   <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
-
   <script async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script>
-
   <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
   <script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>
   <script async custom-element="amp-fx-flying-carpet" src="https://cdn.ampproject.org/v0/amp-fx-flying-carpet-0.1.js"></script>
   <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
 
-
-
   <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  
     <style amp-custom>
     body {
       font-family: 'AvenirNext', sans-serif;
@@ -183,7 +180,6 @@
       margin:20px 0;
     }     
     
-          
     .ampTabContainer {
         display: flex;
         flex-wrap: wrap;
@@ -414,7 +410,7 @@
 
     <h2>Current Offers</h2>
     <p><a on="tap:whyLeaseWithHonda"><svg id="info-modals" viewBox="0 0 14 14" width="100%" height="100%"><path d="M12 2C10.6.7 8.8 0 7 0S3.4.7 2 2C-.7 4.7-.7 9.2 2 11.9 3.4 13.3 5.2 14 7 14s3.6-.7 5-2c2.7-2.8 2.7-7.2 0-10zM7 3c.6 0 1.1.5 1.1 1.1S7.6 5.2 7 5.2s-1.1-.4-1.1-1.1C5.9 3.5 6.4 3 7 3zm1.8 8.4H5.2v-.9h.9V7h-.6v-.9h2.4v4.4h.9v.9z"></path></svg> Why lease with Honda?</a></p>
-<amp-lightbox id="whyLeaseWithHonda" layout="nodisplay">
+    <amp-lightbox id="whyLeaseWithHonda" layout="nodisplay">
     <div class="lightbox-content">
         <div class="lightbox-header">
             <h3>Why lease with Honda?</h3>
@@ -444,91 +440,56 @@
         </div>
     </div>
 </amp-lightbox>
+<div class="tab-content">
     <div class="tabs">
-      
-      <amp-selector  on="select:AMP.setState({selectedTab: event.targetOption})"
-                      [selected]="selectedTab"
-                      role="tablist"
-                      layout="container"
-                  class="ampTabContainer">
-        <div role="tab"
-          class="tabButton"
-          selected
-          option="a" selected>Tab one</div>
-            <div role="tabpanel"
-              class="tabContent">Tab one content... </div>
-        <div role="tab"
-          class="tabButton"
-          option="b">Tab two</div>
-            <div role="tabpanel"
-              class="tabContent">Tab two content... </div>
-        <div role="tab"
-          class="tabButton"
-          option="c">Tab three</div>
-            <div role="tabpanel"
-              class="tabContent">Tab three content... </div>
-        <div role="tab"
-          class="tabButton"
-          option="d">Tab four</div>
-            <div role="tabpanel"
-              class="tabContent">Tab FOUR content... </div>
+      <amp-selector  on="select:AMP.setState({selectedTab: event.targetOption})" [selected]="selectedTab" role="tablist" layout="container"class="ampTabContainer">
+        <div role="tab" class="tabButton" selected option="a" selected>Tab one</div>
+        <div role="tabpanel"class="tabContent">
+            <amp-list src="./offers.json"
+            layout="fixed-height"
+            height="300" id="one"
+            single-item>
+            <template type="amp-mustache">
+                <div class="cards">
+                  <div class="card">
+                    <h3 class="offers-group-model-name">{{ModelGroupName}}</h3>
+                    <amp-img alt="Car" src="{{ModelStockPhotoLarge}}" width="391" height="320" layout="responsive"></amp-img>
+                    <div class="offer-card-type"><span>$</span> Featured Special Lease </div>
+                    <h3 class="offer-card-title">{{SalesProgramName}}</h3>
+                    <div class="offer-card-payment">$259</div>
+                    {{#PaymentTerms}}
+                      {{#FinanceTerms}}
+                        <small>Per month for {{TermMax}} months.</small><br>
+                      {{/FinanceTerms}}
+                    {{/PaymentTerms}}
+                    <small>Per month for 36 months.</small><br>
+                    <small>$1,999 total due at signing.</small>
+                    <p> Expires 07/05/18 </p>
+                    <div class="disclaimer">Includes down payment with no security deposit. Excludes taxes, title and either dealer fees or documentary service fee. For well-qualified lessees.</div>
+                    <button  on="tap:getThisOffer"class="blue">Get this offer</button>
+                    <a href="#" class="link">Offer Details</a>
+                  </div>
+                </div>
+              </div>
+            </template>
+          </amp-list>
+        </div>
+        <div role="tab" class="tabButton" option="b">Tab two</div>
+        <div role="tabpanel" class="tabContent">
+          
+        </div>
+        <div role="tab" class="tabButton" option="c">Tab three</div>
+        <div role="tabpanel" class="tabContent">
+          
+        </div>
+        <div role="tab"class="tabButton" option="d">Tab four</div>
+        <div role="tabpanel" class="tabContent">
+          
+        </div>
       </amp-selector>
 
     </div>
-    <div class="tab-content">
-
-
-
-
-      <!-- ERIK WORK HERE -->
-
-      <amp-list src="/offers.json"
-        layout="fixed-height"
-        height="300" id="one"
-        single-item>
-        <template type="amp-mustache">
-          <div class="card">
-            <!-- TITLE -->
-            <h2>{{ModelGroupName}}</h2>
-            <!-- DESCRIPTION -->
-              <!-- WHICH URL DO WE GO TO? -->
-  
-            <!-- IMAGE -->
-            <amp-img alt="A view of the sea"
-              src="{{ModelStockPhotoLarge}}"
-              width="391"
-              height="320"
-              layout="responsive">
-
-            </amp-img>
-            <!-- SECONDARY TITLE -->
-            <!-- SECONDARY  DESCRIPTION -->
-            <!-- PRICE -->
-            <!-- DISCLAIMER -->
-            <!-- DATE -->
-            <!-- FINE PRINT -->
-            <!-- LINE SEPERATOR -->
-            <!-- GET OFFER -->
-            <!-- OFFER DETAILS -->
-          </div>
-        </template>
-      </amp-list>
-      <div class="cards">
-        <div class="card">
-          <h3 class="offers-group-model-name">CR-V</h3>
-          <div class="offer-card-type"><span>$</span> Featured Special Lease </div>
-          <h3 class="offer-card-title">2018 CR-V Continuously Variable Transmission 2WD LX Featured Special Lease</h3>
-          <div class="offer-card-payment">$259</div>
-          <small>Per month for 36 months.</small><br>
-          <small>$1,999 total due at signing.</small>
-          <p> Expires 07/05/18 </p>
-          <div class="disclaimer">Includes down payment with no security deposit. Excludes taxes, title and either dealer fees or documentary service fee. For well-qualified lessees.</div>
-          <button class="blue">Get this offer</button>
-          <a href="#" class="link">Offer Details</a>
-        </div>
-      </div> 
-      
-    </div>
+  </div>
       <amp-fx-flying-carpet height="280px">
         <amp-img src="/images/whylease.jpg"
           width="411"
