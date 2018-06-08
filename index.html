@@ -5,35 +5,36 @@
   <title>Honda Lease Deals and Current Finance Offers | Honda</title>
   <link rel="canonical" href="https://automobiles.honda.com/tools/current-offers">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-
+ 
   <script async src="https://cdn.ampproject.org/v0.js"></script>
   <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
   <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
   <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"></script>
   <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
-
   <script async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script>
-
   <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
   <script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>
-
-
-
+  <script async custom-element="amp-fx-flying-carpet" src="https://cdn.ampproject.org/v0/amp-fx-flying-carpet-0.1.js"></script>
+  <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+ 
   <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+ 
     <style amp-custom>
     body {
       font-family: 'AvenirNext', sans-serif;
       text-align:center;
     }
+ 
     a {
       text-decoration: none;
       color:#2198dc;
     }
-
+ 
     h2 {
       font-weight: 100;
     }
-
+ 
     button {
       border: 2px solid #2198dc;
       color: #2198dc;
@@ -44,12 +45,12 @@
       padding:8px 22px;
       font-size:14px;
     }
-
+ 
     button.blue {
       background:#2198dc;
       color:#fff;
     }
-
+ 
     /* header */
     .headerbar {
       background: #007cc3;
@@ -57,7 +58,7 @@
       height: 60px;
       font-size: 13px;
     }
-
+ 
     .headerbar a {
       color: #ffffff;
       border-right: 1px solid #4f91ca;
@@ -66,12 +67,12 @@
       text-align: center;
       float:left;
     }
-
+ 
     .headerbar a span {
       margin-top: 35px;
       display: block
     }
-
+ 
     .headerbar svg {
       fill: #fff;
       position:relative;
@@ -80,7 +81,7 @@
       height: 60px;
       width: 50px;
     }
-
+ 
     /* header icons */
     #Vehicles {
       height: 45px;
@@ -88,7 +89,7 @@
       display:block;
       position: absolute;
     }
-    
+   
     #Dealers {
       width: 10px;
       height:15px;
@@ -99,72 +100,72 @@
     #Dealers + span {
       margin-top:20px;
     }
-
+ 
     .hamburger {
       float:right;
       padding-right: 15px;
       margin: 12px 0;
       font-size:24px;
     }
-
-    /* sidebar */ 
+ 
+    /* sidebar */
     .close-sidebar {
       position: absolute;
       right:15px;
       top:20px;
     }
-
+ 
     #sidebar1 {
       background: #f2f2f2;
       width:100%;
       text-align:left;
     }
-
+ 
     #sidebar1 h4 {
       padding-left:35px;
       font-weight: 100;
       text-transform: uppercase;
     }
-
+ 
     .sidebar {
       list-style: none;
       padding-left:0px;
       margin:0px;
     }
-
+ 
     .sidebar li{
       padding:10px 20px;
       background:#ececec;
     }
-
+ 
     .sidebar li a {
       color: #00446b;
       padding: 0 20px;
     }
-
+ 
     .search-bar-nav {
       background-color: #fff;
       border-bottom: 1px solid #e0e0e0;
       padding:15px;
     }
-
+ 
     #search {
       fill:#2198dc;
       width:13px;
       height:13px;
     }
-
+ 
     #search-bar-form input {
       font-size:16px;
       width:160px;
     }
-
+ 
     #search-bar-form button {
       font-size:11px;
       padding:8px 15px;
     }
-
-
+ 
+ 
     /* main content */
     #info-modals {
       height:20px;
@@ -172,71 +173,57 @@
       fill: #2198dc;
       margin-bottom:-3px;
     }
-
+ 
     /* BRADLEY */
     .tab-content {
       padding: 20px 10px;
       background:#f2f2f2;
       margin:20px 0;
-    }
-         
+    }    
+    
     .ampTabContainer {
         display: flex;
         flex-wrap: wrap;
     }
-    
+   
     .tabButton[selected] {
         outline: none;
         background: #ccc;
     }
-    
+   
     .tabButton {
         list-style: none;
         flex-grow: 1;
         text-align: center;
         cursor: pointer;
     }
-    
+   
     .tabContent {
         display: none;
         width: 100%;
         order: 1; /* must be greater than the order of the tab buttons to flex to the next line */
         border: 1px solid #ccc;
     }
-    
+   
     .tabButton[selected]+.tabContent {
         display: block;
-    }
-
-    /* For example below (not required) */
-    .itemCustom {
-        border: 1px solid #000;
-        height: 280px;
-        width: 380px;
-        margin: 10px;
-        text-align: center;
-        padding-top: 140px;
-    }
-    amp-selector {
-      padding: 1rem;
-      margin: 1rem;
-    }
-
-    /* lightbox */ 
+    }  
+ 
+    /* lightbox */
     amp-lightbox {
       width:88%;
       margin:15px auto;
       box-shadow: 0 3px 9px rgba(0,0,0,.5);
     }
-    .i-amphtml-fill-content {
-      overflow: auto;
-    }
+  
     .lightbox-content {
       padding: 20px;
       background: #fff;
       text-align: left;
+      overflow: auto;
+      height: 100%;
     }
-
+ 
     .lightbox-header {
       position:fixed;
       border-bottom:1px solid #ccc;
@@ -245,11 +232,11 @@
       margin-top:-20px;
       padding:10px 0px;
     }
-
+ 
     .lightbox-copy {
       margin-top:80px;
     }
-
+ 
     .lightbox-content button {
       position: absolute;
       width: 30px;
@@ -258,7 +245,7 @@
       right: -5px;
       top: 25px;
     }
-
+ 
     footer {
       padding:30px;
       background: #007cc3;
@@ -266,16 +253,16 @@
       font-size: 12px;
       line-height: 2em;
     }
-
+ 
     footer .copyright {
       margin-bottom:20px;
     }
-
+ 
     footer a {
       color: #a3c5e2;
       text-decoration: underline;
     }
-
+ 
     /* cards */
     .card {
       margin:10px auto;
@@ -296,7 +283,7 @@
       font-size:16px;
       margin:15px 0;
     }
-
+ 
     .offer-card-type span {
       background:#49c595;
       padding:5px;
@@ -306,20 +293,20 @@
     height: 17px;
     display: inline-block;
     margin-right: 5px;
-
+ 
     }
-
+ 
     .offer-card-title {
       font-size:14px;
       font-weight: bold;
     }
-
+ 
     .offer-card-payment {
       font-size: 40px;
       font-weight: bold;
       margin-bottom:15px;
     }
-
+ 
     .card .disclaimer {
       font-size: 10px;
     text-align: left;
@@ -327,7 +314,7 @@
     margin-bottom: 15px;
     border-bottom: 1px solid #eaeaea;
     }
-
+ 
     .card .link {
       font-size:14px;
       text-transform: uppercase;
@@ -335,6 +322,94 @@
       font-weight: bold;
       display: block;
     }
+ 
+    /* accordions */
+    amp-accordion section h4 {
+      padding:20px;
+      text-align: left;
+      color: #00446b;
+    }
+ 
+    amp-accordion ul {
+      list-style: none;
+      text-align: left;
+      padding-left:20px;
+    }
+ 
+    amp-accordion ul li {
+      margin:15px 0;
+      font-size:13px;
+    }
+ 
+    .fc-content {
+      position: absolute;
+      color: #fff;
+      width:100%;
+      padding:20px;
+ 
+    }
+ 
+    .fc-content h4, .fc-content p {
+      padding-left:20px;
+      padding-right:20px;
+    }
+ 
+    .footer-search #search-bar-form input {
+      float: left;
+      width:275px;
+      margin-top: 4px;
+    }
+    .footer-search #search {
+      float:left;
+      margin-top:10px;
+      margin-right:5px;
+    }
+
+  .tabButton {
+    background-color: #fff;
+    color: #2198dc;
+    border-right: 1px solid #2198dc;
+   
+    line-height: 1.8rem;
+    margin-bottom: 23px;
+    padding: 0 10px;
+    text-transform: uppercase;
+    transition: fill .3s,color .3s,background-color .3s;
+    width: auto;
+    outline: 0;
+    background: #fff;
+  }
+ 
+  .tab-list {
+    float: left;
+  }
+ 
+  .tabs {
+/*    flex-wrap:wrap;
+    dislay: flex;*/
+    display: inline-block;
+/*    float: left;*/
+/*    justify-content: center;*/
+  }
+ 
+  div.wrapper.hrt offers-wrapper tab-list .tab {
+    font-size: 12px;
+  }
+ 
+  amp-selector [option][selected] {
+    border: none;
+    outline: 0;
+    font-size: 12px;
+ 
+  }
+  amp-selector [option] {
+    font-size: 12px;
+  }
+  .tabButton[selected] {
+    background: #fff;
+  }
+ 
+ 
   </style>
 </head>
 <body>
@@ -414,11 +489,12 @@
 </amp-lightbox>
     <div class="tabs">
       <amp-selector  on="select:AMP.setState({selectedTab: event.targetOption})" [selected]="selectedTab" role="tablist" layout="container"class="ampTabContainer">
-        <div role="tab" class="tabButton" selected option="a" selected>Tab one</div>
+        <div role="tab" class="tabButton" selected option="a" selected>Featured Offers</div>
         <div role="tabpanel"class="tabContent">
             <amp-list src="./offers.json"
             layout="fixed-height"
-            height="300" id="one"
+            height="1000" 
+            id="one"
             single-item>
             <template type="amp-mustache">
                 <div class="cards">
@@ -445,59 +521,100 @@
             </template>
           </amp-list>
         </div>
-        <div role="tab" class="tabButton" option="b">Tab two</div>
+        <div role="tab" class="tabButton">Lease Offers</div>
         <div role="tabpanel" class="tabContent">
           
         </div>
-        <div role="tab" class="tabButton" option="c">Tab three</div>
+        <div role="tab" class="tabButton">Finance Offers</div>
         <div role="tabpanel" class="tabContent">
           
         </div>
-        <div role="tab"class="tabButton" option="d">Tab four</div>
+        <div role="tab"class="tabButton">Special Programs</div>
         <div role="tabpanel" class="tabContent">
           
         </div>
       </amp-selector>
-
     </div>
-    <!-- ERIK WORK HERE -->
+  <amp-fx-flying-carpet height="350px">
+    <amp-img src="/imagesv2/whylease.jpg"
+      width="411"
+      height="731"
+      alt="Why Lease with Honda"
+      layout="responsive"></amp-img>
+    <div class="fc-content">
+      <h4>Why lease with Honda?</h4>
+      <p>Keep your options open with lower up-front costs and flexible contract terms.</p><br>
+      <button class="blue">Learn More</button>
+    </div>
+  </amp-fx-flying-carpet>  
+  <amp-fx-flying-carpet height="350px">
+      <amp-img src="/imagesv2/finance.jpg"
+        width="411"
+        height="731"
+        alt="Why Lease with Honda"
+        layout="responsive"></amp-img>
+      <div class="fc-content">
+        <h4>Lease vs. Finance</h4>
+        <p>Explore the many factors that influence your decision, from monthly payments to driving time.</p><br>
+        <button class="blue">Learn More</button>
+      </div>
+  </amp-fx-flying-carpet>    
+  <div class="search-bar-nav footer-search">
+    <form id="search-bar-form" target="_top" action="/search" data-placeholder-mobile="Type Here" data-placeholder-desktop="Search for anything Honda">
+      <div class="input-wrapper clearfix">
+        <div class="input">
+          <svg id="search" viewBox="0 0 80 80" width="100%" height="100%">
+              <path d="M78.4 70.6L58.1 50.3c3.7-5.2 5.8-11.5 5.8-18.4 0-17.6-14.3-32-32-32C14.3 0 0 14.3 0 32s14.3 32 32 32c6.8 0 13.2-2.2 18.4-5.8l20.3 20.3c2.1 2.1 5.6 2.1 7.8 0 2-2.3 2-5.8-.1-7.9zM32 53.3c-11.8 0-21.3-9.5-21.3-21.3S20.2 10.7 32 10.7 53.3 20.2 53.3 32 43.7 53.3 32 53.3z"></path>
+          </svg>
+          <input type="text" name="s" class="search-bar-input" value="" placeholder="Type Here"></div>
+          <button type="submit">Search</button>
+      </div>
+  </form>
+</div>
+<amp-accordion>
+<section>
+  <h4>Vehicles</h4>
+  <ul>
+    <li><a href="#">Accord Models</a></li>
+    <li><a href="#">Civic Models</a></li>
+  </ul>
+</section>
+<section>
+  <h4>Shopping Tools</h4>
+  <ul>
+    <li><a href="#">Build & Price</a></li>
+    <li><a href="#">Search Inventory</a></li>
+  </ul>
+</section>
+<section>
+  <h4>Discover Honda</h4>
+     <ul>
+    <li><a href="#">About Us</a></li>
+    <li><a href="#">FAQ</a></li>
+  </ul>
 
-    <amp-list src="./offers.json"
-      layout="fixed-height"
-      height="300" id="one"
-      single-item>
-      <template type="amp-mustache">
-          <div class="cards">
-            <div class="card">
-              <h3 class="offers-group-model-name">{{ModelGroupName}}</h3>
-              <amp-img alt="Car" src="{{ModelStockPhotoLarge}}" width="391" height="320" layout="responsive"></amp-img>
-              <div class="offer-card-type"><span>$</span> Featured Special Lease </div>
-              <h3 class="offer-card-title">{{SalesProgramName}}</h3>
-              <div class="offer-card-payment">$259</div>
-              {{#PaymentTerms}}
-                {{#FinanceTerms}}
-                  <small>Per month for {{TermMax}} months.</small><br>
-                {{/FinanceTerms}}
-              {{/PaymentTerms}}
-              <small>Per month for 36 months.</small><br>
-              <small>$1,999 total due at signing.</small>
-              <p> Expires 07/05/18 </p>
-              <div class="disclaimer">Includes down payment with no security deposit. Excludes taxes, title and either dealer fees or documentary service fee. For well-qualified lessees.</div>
-              <button class="blue">Get this offer</button>
-              <a href="#" class="link">Offer Details</a>
-            </div>
-          </div>
-        </div>
-      </template>
-    </amp-list>
+</section>
+ <section>
+  <h4>Help & Support</h4>
+     <ul>
+    <li><a href="#">Accord Models</a></li>
+    <li><a href="#">Civic Models</a></li>
+  </ul>
+
+</section>
+ <section>
+  <h4>Owners</h4>
+      <p>Bunch of awesome content.</p>
+</section>
+</amp-accordion>
 <footer>
-    <div class="copyright">©2018 <a href="http://www.honda.com" target="_blank">American Honda Motor Co., Inc.</a> All information contained herein applies to U.S. vehicles only. Please see our <a href="/information/consumer-privacy-policy">Privacy Policy</a> and <a href="/information/legal-terms">Legal Terms and Conditions</a>. For non-U.S.-distributor information go to <a href="http://world.honda.com/link/" target="_blank">world.honda.com</a>.</div>
-    <div class="text-links">
-        <a href="">Vehicle Data Privacy</a>
-        <a href="">Privacy Policy</a>
-        <a href="/information/legal-terms">Terms &amp; Conditions</a>
-        <a href="/sitemap">Site Map</a>
-    </div>
+  <div class="copyright">©2018 <a href="http://www.honda.com" target="_blank">American Honda Motor Co., Inc.</a> All information contained herein applies to U.S. vehicles only. Please see our <a href="/information/consumer-privacy-policy">Privacy Policy</a> and <a href="/information/legal-terms">Legal Terms and Conditions</a>. For non-U.S.-distributor information go to <a href="http://world.honda.com/link/" target="_blank">world.honda.com</a>.</div>
+  <div class="text-links">
+      <a href="">Vehicle Data Privacy</a>
+      <a href="">Privacy Policy</a>
+      <a href="/information/legal-terms">Terms &amp; Conditions</a>
+      <a href="/sitemap">Site Map</a>
+  </div>
 </footer>
 
 </body>
