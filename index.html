@@ -363,6 +363,25 @@
       margin-top:10px;
       margin-right:5px;
     }
+
+    amp-selector [option] {
+      background:transparent;
+      outline: 0;
+      margin-bottom:15px;
+      text-transform: uppercase;
+      color: #2198dc;
+      font-size:14px;
+      font-weight: bold;
+    }
+    .tabButton[selected] {
+      background: transparent;
+      outline:0;
+    }
+
+    amp-selector [option][selected] {
+      outline:0;
+    }
+
   </style>
 </head>
 <body>
@@ -443,9 +462,22 @@
 <div class="tab-content">
     <div class="tabs">
       <amp-selector  on="select:AMP.setState({selectedTab: event.targetOption})" [selected]="selectedTab" role="tablist" layout="container"class="ampTabContainer">
-        <div role="tab" class="tabButton" selected option="a" selected>Tab one</div>
+        <div role="tab" class="tabButton" selected option="a" selected>Featured Offers</div>
         <div role="tabpanel"class="tabContent">
-            <amp-list src="./offers.json"
+          <div class="card">
+                    <h3 class="offers-group-model-name">Accord Sedan</h3>
+                    <!-- <amp-img alt="Car" src="/imagesv2/carshot_Accord_front_15TLX_2018_LunarSilverMetallic_CV1F1JEW_NH-830M.jpg" width="391" height="320"> -->
+                    <div class="offer-card-type"><span>$</span> Featured Special Lease </div>
+                    <h3 class="offer-card-title">2018 Accord Sedan Special APR</h3>
+                    <div class="offer-card-payment">$259</div>
+                    <small>Per month for 36 months.</small><br>
+                    <small>$1,999 total due at signing.</small>
+                    <p> Expires 07/05/18 </p>
+                    <div class="disclaimer">Includes down payment with no security deposit. Excludes taxes, title and either dealer fees or documentary service fee. For well-qualified lessees.</div>
+                    <button on="tap:getThisOffer" class="blue">Get this offer</button>
+                    <a href="#" class="link" target="_top">Offer Details</a>
+                  </div>
+            <!-- <amp-list src="./offers.json"
             layout="fixed-height"
             height="300" id="one"
             single-item>
@@ -472,19 +504,19 @@
                 </div>
               </div>
             </template>
-          </amp-list>
+          </amp-list> -->
         </div>
-        <div role="tab" class="tabButton" option="b">Tab two</div>
+        <div role="tab" class="tabButton" option="b">Lease Offers</div>
         <div role="tabpanel" class="tabContent">
-          
+          Lease Offers Content
         </div>
-        <div role="tab" class="tabButton" option="c">Tab three</div>
+        <div role="tab" class="tabButton" option="c">Finance Offers</div>
         <div role="tabpanel" class="tabContent">
-          
+          Finance Offers
         </div>
-        <div role="tab"class="tabButton" option="d">Tab four</div>
+        <div role="tab"class="tabButton" option="d">Special Programs</div>
         <div role="tabpanel" class="tabContent">
-          
+          Special Programs
         </div>
       </amp-selector>
 
